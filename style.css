@@ -66,8 +66,12 @@ body {
 .footer{
   background-color: #FFC300;
   color: #222222;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
   text-align: center;
-  padding: 5px;
+  padding-top: 50px;
 }
 
 .welcome{
