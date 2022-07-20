@@ -1,12 +1,15 @@
 *,
 *::before,
-*::after{
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
-html{
+
+
+
+html {
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
 }
@@ -17,109 +20,204 @@ body {
   height: 100vh;
 }
 
-.navigation{
-  padding: 10px 100px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0px 3px 15px rgba(0,0,0, .3);
+.icon_img {
+  width: 50px;
 }
 
-.logo-lien{
-  margin-right: auto;
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #222222;
+  position: relative;
 }
 
-.logo-image{
-  width: 75px;
-  height: auto;
+.nav > .nav-header {
+  display: inline;
 }
 
-.nav-lien:link,
-.nav-lien:visited{
-  text-decoration: none;
-  font-size: 20px;
-  padding: 10px 30px;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-weight: 600;
+.nav > .nav-header > .nav-title {
   display: inline-block;
-  width: 100px;
-  text-align: center;
-  transition: all .2s;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
 }
 
-.nav-lien:not(:last-child){
-  border-radius: 1px solid  #FFC300 ;
+.nav > .nav-btn {
+  display: none;
 }
 
-.nav-lien:hover{
-  background-color: #ffffff;
-  color: #222222;
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
 }
 
-.main{
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+.main {
   height: 800px;
   display: flex;
   text-align: center;
   align-items: center;
 }
 
-.footer{
+.footer {
   background-color: #FFC300;
   color: #222222;
-  position: absolute;
-  bottom: 0;
-  height: 50px;
-  width: 100%;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 5px;
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  height: 25px;
 }
 
-.welcome{
+.footer_premium {
+  background-color: #FFC300;
+  color: #222222;
+  text-align: center;
+  padding-top: 5px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 25px;
+}
+
+.welcome {
   text-align: center;
   margin: 10px;
 }
 
-.txt{
-  text-align: center;
-  font-size: 35px;
+.txt {
+  text-align: justify;
   padding: 10px;
 }
 
-.txt2{
+.txt2 {
   text-align: center;
   padding: 20px;
   font-size: larger;
 }
 
-.tle-dev{
+.changelog {
+  text-align: center;
+  padding: 2.5px;
+}
+
+.legende {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.txt_chnlog {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.annonces {
+  text-align: center;
+  padding: 2.5px;
+}
+
+.legndann {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.txtannonces {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.tle-dev {
   text-align: center;
   margin: 20px;
 }
 
-.dev{
+.dev {
   text-align: center;
   padding: 10px;
   list-style-type: none;
 }
 
-.list-dev{
+.list-dev {
   width: auto;
   height: 75px;
   border-radius: 10px 0;
+  padding-top: 10px;
 }
 
-.invite{
+.invite {
   text-align: center;
   font-size: 45px;
   padding: 250px;
 }
 
-.discord{
+.discord {
   text-decoration: none;
   color: #ffffff;
 }
 
-.list_bot{
+.list_bot {
   text-align: center;
   color: #ffffff;
   padding-top: 125px;
@@ -127,55 +225,56 @@ body {
   font-size: 45px;
 }
 
-.bbmo{
+.bbmo {
   text-align: center;
   padding-bottom: 15px;
 }
-.bbmo_image{
+
+.bbmo_image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 
-.bbmc{
+.bbmc {
   text-align: center;
   padding-bottom: 15px;
 }
 
-.bbmc_image{
+.bbmc_image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 
-.bbr{
+.bbr {
   text-align: center;
   padding-bottom: 15px;
 }
 
-.bbr_image{
+.bbr_image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 
-.bbg{
+.bbg {
   text-align: center;
   padding-bottom: 15px;
 }
 
-.bbg_image{
+.bbg_image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 
-.bbf{
+.bbf {
   text-align: center;
   padding-bottom: 20px;
 }
 
-.bbf_image{
+.bbf_image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
