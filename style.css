@@ -80,7 +80,8 @@ body {
 }
 
 .txt{
-  text-align: justify;
+  text-align: center;
+  font-size: 35px;
   padding: 10px;
 }
 
