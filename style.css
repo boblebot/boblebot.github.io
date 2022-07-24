@@ -111,6 +111,7 @@ body {
     height: calc(100vh - 50px);
     overflow-y: auto;
   }
+
 }
 
 .main {
@@ -129,6 +130,11 @@ body {
   width: 100%;
   bottom: 0;
   height: 25px;
+}
+
+.premium{
+  text-align: center;
+  font-size: xx-large;
 }
 
 .footer_premium {
@@ -158,34 +164,62 @@ body {
   font-size: larger;
 }
 
+.firstbox{
+  box-sizing: border-box;
+  align-self: center;
+  height: 250px;
+  width: 300px;
+  border-radius: 10%;
+  margin-left: 450px;
+  background-color: #FFC300;
+  border: 2px solid #eee;
+}
+
 .changelog {
   text-align: center;
   padding: 2.5px;
+  color:#222222;
 }
 
 .legende {
   text-align: center;
   padding-bottom: 5px;
+  color: #222222;
 }
 
 .txt_chnlog {
   text-align: center;
   padding-bottom: 10px;
+  color: #222222;
+}
+
+.annbox{
+  align-items: center;
+  box-sizing: border-box;
+  height: 250px;
+  width: 300px;
+  border-radius: 10%;
+  margin-left: 750px;
+  background-color: #FFC300;
+  border: 2px solid #eee;
 }
 
 .annonces {
   text-align: center;
   padding: 2.5px;
+  color: #222222;
 }
 
 .legndann {
   text-align: center;
   padding-bottom: 5px;
+  color: #222222;
 }
 
 .txtannonces {
   text-align: center;
   padding-bottom: 10px;
+  color: #222222;
 }
 
 .tle-dev {
